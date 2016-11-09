@@ -1,4 +1,4 @@
-package javatest;
+package com.ddb.javaCore.exceptiontest;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
