@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>申请表</title>
+</head>
+<body style="background-color: pink;">
+
+	<form action="apply" method="post">
+		<table border="1">
+			<h2>申请表</h2>
+			<tr>
+				<td>姓名:</td>
+				<td><input name="username" type="text" />&nbsp;&nbsp;&nbsp;<span>(请输入姓名)</span></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input name="password" type="password">&nbsp;&nbsp;&nbsp;<span>(请输入密码)</span></td>
+			</tr>
+			<tr>
+				<td >照片:</td>
+				<td> <input name="tupian" type="file" value="ooooo"/></td>
+			</tr>
+			<tr>
+			<td colspan="2">感兴趣的职位:</td>
+			</tr>
+			<tr>
+			<td colspan="2"> <input name="radio1" type="radio"/checked="checked"><span>Web设计</span>
+			&nbsp;&nbsp;&nbsp;<input name="radio2" type="radio"/>Web开发</td>
+			</tr>
+			<tr>
+			<td colspan="2"><span>向往的城市:</span>&nbsp;&nbsp;
+			<select>
+			<option value="0" >请选择</option>
+			<option value="1" selected="selected">北京</option>
+			<option value="2">上海 </option>
+			<option value="3">合肥</option>
+			<option value="4">杭州</option>
+			</select ></td>
+			</tr>
+			<tr>
+			<td>协议:</td>
+			</tr>
+            <tr>
+			<td colspan="2">
+			<textarea name="textarea" rows="10" cols="30">求职者信息必须真实有效</textarea>
+			</td>
+			</tr>
+			<tr>
+			<td colspan="2"><input name="checkbox" type="checkbox" checked="checked">
+			<span>我已认真阅读并并接收以上协议</span></td>
+            </tr>
+             <tr>
+             <td>经验:</td>
+             </tr>            
+            <tr>
+            <td colspan="2">
+             <select>
+             <option value="0" selected="selected">无经验</option>
+             <option value="1">一年以内</option>
+             <option value="2">三年以内</option>
+             <option value="3">五年以内</option>
+             </select>
+             </td>
+            </tr>
+            <tr>
+             <td colspan="2">&nbsp;&nbsp;&nbsp;<input name="submit" type="submit" value="提交" disabled="disabled" />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="reset" type="reset"/></td>
+             </tr>
+
+
+		</table>
+	</form>
+
+</body>
+</html>
