@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script language="javascript">
+
+function wclose() {
+	window.close();
+}
+   function forin() {
+	var myobject=new Object;
+	myobject.name="subiao";
+	myobject.age="24";
+	myobject.phone="178666"
+    for ( prop in myobject) {
+	window.alert("The property "+prop+" is "+myobject[prop]);
+		
+	}
+}	
+	
+	 
+	function function1(exp1,exp2,exp3,exp4){
+		var Number=function1.arguments.length;
+			document.write(exp1+"<br/>");
+		if(Number>1)
+			document.write(exp2+"<br/>");
+		if(Number>2)
+			document.write(exp3 +"<br/>");
+		if(Number>3)
+			document.write(exp4 +"<br/>");
+		
+	}
+	 function pasta(grain,width,shape,hadegg) {
+		this.grain=grain;
+		this.width=width;
+		this.shape=shape;
+		this.hadegg=hadegg;
+		this.toString=pastaToString;
+		
+	}
+	 function pastaToString() {
+		return "Grain:"+this.grain+"/n"+
+		"Shape"+this.shape+"/n"+
+		"Width"+this.width+"/n"+
+		"Egg?"+Boolean(this.hasegg);
+	}
+      	function walert(grain,width,shape,hadegg) {
+			var spaghelti=new pasta(grain,width,shape,hadegg);
+			window.alert(spaghelti);
+		} 
+    function student(name,age,phone) {
+    	this.name=name;
+    	this.age=age;
+    	this.phone=phone;
+    	this.getname=getname;
+    	this.getage=getage;
+		
+	}
+      function getname() {
+		return this.name
+	}  	
+      function getage() {
+		return this.age
+	}  	
+  
+     function student_alert(name,age,phone) {
+		var s=new student(name,age,phone);
+        var alt="name:  "+s.getname()+ "\nage:  "+s.getage()
+        +s.phone;
+		alert(alt);
+		//alert(s.getage());
+		//alert(s.phone);
+		
+	}
+     var spaghetti=new pasta("wheat",.02,"cirle",true)
+     window.alert(spaghetti);
+     
+     
+
+</script>
+</head>
+<body>
+	<a href="javascript:self.close()">标签形式关闭窗口</a>
+	<br />
+	<input type="button" value="按钮关闭" onclick="wclose()" />
+	<input type="button" value="弹出信息" onclick="forin()" />
+	<input type="button" value="function_name" onclick="function1('11','22','33','44')"/>
+	<input type="button" value="pastaDemo" onclick="walert('liangshi','bolid','20','false')"/>
+	<input type="button" value="student_name" onclick="student_alert('subiao',24,1786666)"/>
+	<input type="button" value="spaghetti" onclick="spaghetti"/>
+     
+
+</body>
+</html>

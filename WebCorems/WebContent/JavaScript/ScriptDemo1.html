@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我的第一个JavaScript程序</title>
+
+<script type="text/javascript">
+function Age() {
+     document.write("Hello World   ")
+}
+function DialogBox(){
+	alert("welcome!");
+	confirm("How old are you?");
+	prompt("How old are you?","23");
+}
+function w() {
+	document.write("转义字符的演示 :\" \' \"   \\n <br> abc  \r abc");
+}
+
+function name(exp1,exp2,exp3,exp4) {
+	number=name.arguments.length;
+	if(number>1)
+		document.write(exp2);
+	if(number>2)
+		document.write(exp3);
+	if(number>3)
+		document.write(exp4);
+}
+     
+</script>
+
+</head>
+<body onload="w()" >
+
+<input onclick="Age()" name="button1" type="button" value="点点看">
+<br/>
+<input onclick="DialogBox()" name="button2" type="button" value="点我啊">
+<br/>
+<h3>关闭浏览器</h3>
+
+ <a href="javascript:self.close()">关闭窗口</a> 
+<br/>
+<input onclick="name(6,5,4,3)" type="button" value="函数调用"/>
+
+</body>
+</html>
+
+
+
