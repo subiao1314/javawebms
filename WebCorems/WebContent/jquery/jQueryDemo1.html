@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<script>
+  function get_txt() {
+   	alert(document.getElementById("txt").values);
+	alert($('#tet').val());
+   $("div").css('border','1px solid red');
+}
+</script>
+
+</head>
+<body>
+	<input type="text" id="txt" />
+	<button type="button" onclick="get_txt()">Go</button>
+	<div>这是DIV的内容</div>
+	<br />
+	<div id="form">div的内容form</div>
+	<div id="to"></div>
+	<script type="text/javascript"> 
+  $('#to').html($('#form').html());
+ </script>
+
+	<ul>
+		<li class="fruit">Apple</li>
+		<li>Tomato</li>
+		<li class="fruit">Banana</li>
+		<li>Potato</li>
+		<li><span>mihoutao</span></li>
+		<li class="fruit">Orange</li>
+		
+	</ul>
+	<script type="text/javascript">
+       // $('.fruit').css('color','green');
+      //  $('li:eq(2)').css('color','red'); //指定下标过滤 让第三个变为红色
+      // $("li:contains('ta')").css('font-size','35px');//contains包含内容过滤
+      //  $('li:has(span)').css('color','blue'); //包含span的语句
+  </script>
+
+	<br />
+	<hr />
+	<ul id="ul1">
+		<li class="fruit2">Apple</li>
+		<li id=tomato>Tomato</li>
+		<li class="fruit2">Banana</li>
+		<li>Potato</li>
+		<li class="fruit2">Orange</li>
+	</ul>
+	<script type="text/javascript">
+   $('.fruit2,#tomato').css('font_family','华文行楷').css('color','blue');
+
+   
+   </script>
+
+	<script type="text/javascript">
+    console.log($('*'));
+  </script>
+
+	<br />
+	<hr />
+	//层次选择器
+	<div>
+		祖先元素
+		<p>
+			<label>孙元素</label> <span><label>后代元素</label></span>
+		</p>
+		<label>子元素</label>
+	</div>
+	<script>
+    $('div label').css('color','red');
+ </script>
+	<script>
+    $('div>label').css('color','blue');
+ </script>
+	<script>
+    $('p>label').css('font-size','30px');
+ </script>
+
+	<br />
+	<hr />
+	<div>
+		祖先元素
+		<p>孙元素<p></p>
+		<span>后代元素</span>
+		</p>
+
+			<label>子元素</label> <label>子元素2</label> <label>子元素3</label> <label>子元素4</label>
+			<label>子元素5</label>
+	</div>
+<!-- 	<script type="text/javascript">
+   $('p~label').css('color','pink');
+ </script>
+ -->
+	<br />
+//使用first是文本框中若有多列带有<li>标签的语句，仅第一个列表中第一个<li>标签会生效！！
+	<hr />
+	<ol id="ol1">
+		<li>Apple</li>
+		<li>Lomato1</li>
+		<li>Banana</li>
+		<li>Potato</li>
+		<li>Orange</li>
+	</ol>
+	<script type="text/javascript">
+//	$('li:first-child').css('color','red');
+//	$('li:last-child').css('color','blue');
+//	$('li:last-child').css('font-family','华文行楷');
+  
+   
+	</script>
+
+<br/><hr/>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

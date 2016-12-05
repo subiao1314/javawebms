@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>九九乘法口诀表</title>
+<script src="JQuery.js"></script>
+
+<style type="text/css">
+<!--
+table {
+	width: 600px;
+	border-collapse: collapse;
+}
+
+table td {
+	border: #CC0000 1px solid
+}
+-->
+</style>
+
+<script type="text/javascript">
+   
+   var row1=[];
+   var col1=[0,0,0,0,0,0,0,0,0,0];
+  function mutiplywrite() {
+  
+	  var str="<br/><h3>打印九九乘法表</h3><table boder='1px'>"
+      for (var i = 1; i <10; i++) {
+    	 row1[i]=0;
+		str+="<tr>";
+	  for (var j = 1; j < 10; j++) {
+		if (j<=i) {
+			str+="<td>"+i+"*"+j+"="+i*j+"</td>";
+		    row1[i]+=i*j;
+		    col1[j]+=i*j;
+		} else {
+          str+="<td>&nbsp;</td>";
+		}
+	}
+		str+="</tr>";
+   }
+	  str+="</table>";
+      $('body').append(str);
+      $('#button1').attr('disabled','true');
+  }
+
+   function butcount() {
+	  var lastTr=$('#lastTr');
+	   if (lastTr[0]=null) {     //根据lastTr的长度判断是否添加统计行和列
+		$('table').append("<tr id='lastTr'>");  //先在table最后添加一行，添加一个id作为标记
+	 for (var k = 1; k < 10; k++) {
+		
+			$('tr:eq(' + (k - 1) + ')').append("<td>" + row1[k] + "</td>");  //在每一行最后中添加总和单元格<td>
+			$('tr:last').append("<td>" + col1[k] + "</td>");		//在最后一行中添加每一列的总和
+		}
+		$('tr:last').append("<td>&nbsp;</td></tr>");     //封闭最后一行
+										//添加个统计就改变flag
+		}else{
+			window.alert('已经添加过统计！');
+			   
+	}
+	   
+	   	   
+	  
+      
+  }  
+	  
+	
+</script>
+
+<script type="text/javascript">
+$('h2').css('color','red');
+</script>
+
+</head>
+<body>
+	<form style="background-color: light blue; border: 1px;">
+		<h2>
+			<center>九九乘法口诀表</center>
+		</h2>
+		<hr />
+		<input type="button" id="button1" value="打印乘法口诀"
+			onclick="mutiplywrite()" />&nbsp;&nbsp;&nbsp;&nbsp; <input
+			type="button" id="button2" value="统计" onclick="butcount" />&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" id="button3" value="样式" />
+
+	</form>
+
+
+
+</body>
+</html>

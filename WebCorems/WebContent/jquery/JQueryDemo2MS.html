@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery2</title>
+<script  src="JQuerymini.js" >
+ 
+</script>
+
+</head>
+<body>
+<span id="p1"> 过滤隐藏和显示的元素</span><br/>
+<span> style="display:none"我是隐藏的1</span><br/>
+<p style="display:none">我是隐藏的2</p>
+<p style="display:none">我是隐藏的3</p>
+<p style="display:none">我是隐藏的4</p>
+<p style="display: none;"> 我也是隐藏的</p>
+<script type="text/javascript">
+    $('p:hidden').show();
+    $('p:visible').hide();
+</script>
+
+<br/><hr/>  
+<form id="my_form">
+<input type="text" id="ipt" class="cls-ipt"/>
+ </form> 
+  <script type="text/javascript">
+  $('input[id=ipt]').val('hello');  //属性选择器
+  $('input[class=cls-ipt]').val('world');
+  $('#ipt').val('nihao');
+  $('.cls-ipt').val('subiao');
+  $('#my_form:text').val('I am coming');
+  </script>
+
+<form id="my_form">  
+<input type="text"/>
+<input type="radio"/>
+<input type="radio" checked="checked"/>
+<input type="checkbox"/>
+<input type="checkbox" checked="checked"/>
+</form>
+<script type="text/javascript">
+//console.log($('#my_form:input:checked'));
+</script>
+
+<br/><hr/>
+<select id="set">
+  <option value='1'>苹果</option>
+ <option value='2'>荔枝</option>
+ <option value='3' selected="selected">桔子</option>
+ <option value='4'>香蕉</option>
+ <option value='5' selected="selected">葡萄</option>
+</select>
+<script type="text/javascript">
+  console.log($('#sel:selected'));
+</script>
+
+<br/><hr/>
+<form id="my_form" action="too.php">
+</form>
+<script type="text/javascript">
+/* console.log($('#my_form').attr("action"));
+$('#my_form').attr('action','borpop');
+console.log($('#my_form').attr('action')); //att() */
+
+
+console.log($('#my_form').attr('action'));
+$('#my_form').attr('action','bor.pop');
+//$('#my_form').removeAttr('action');
+console.log($('#my_form').attr("action"));
+</script>
+
+<br/><hr/>
+<p><b>hello</b></p>
+<script type="text/javascript">
+$('p').html('<i>world</i>');
+console.log($('p').html());
+
+ $('p').text('<u>come on</u>');
+console.log($('p').html()); 
+console.log($('p').text()); 
+</script>
+
+<p id='p1'><input type="text"/><input type="button" value="Go"></p>
+<script type="text/javascript">
+var clone_p=$('#p1').clone();
+$('#p1').after(clone_p);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

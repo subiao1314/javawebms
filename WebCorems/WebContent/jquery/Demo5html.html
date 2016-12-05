@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>动画效果</title>
+<script type="text/javascript"
+	src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    function showDemo() {
+		$('p').show('slow',function(){
+			alert('显示成功！');
+		})
+	}
+    function hideDemo() {
+		$('p').hide('slow',function(){
+			alert('隐藏成功！');
+		})
+	}
+    function toggleDemo() {
+		$('p').toggle('slow',function(){
+			alert('开关测试成功！');
+		})
+	}
+    function slideUpDemo() {
+		$('p').slideUp('slow',function(){
+			alert('slideUp测试成功！');
+		})
+	}
+    function slideDownDemo() {
+		$('p').slideDown('slow',function(){
+			alert('slideDown测试成功！');
+		})
+	}
+    function slideToggleDemo() {
+		$('p').slideToggle('slow',function(){
+			alert('slideToggle测试成功！');
+		})
+	}
+    function fadeInDemo() {
+		$('p').fadeIn(3000)
+	}
+    function fadeToDemo() {
+		$('p').fadeTo(3000,0.1)
+	}
+    function fadeOutDemo() {
+		$('p').fadeOut(3000)
+	}
+  $('#but1').bind('click',function(){
+	  $('div').anlmate({
+		  with:'240px',height='300px'
+	  },3000);
+  })
+    
+    
+    
+    
+    
+
+</script>
+</head>
+<body>
+<p><b>hello world</b></p>
+<div style="width: 24px;height: 30px;boder:1px red solid">这是一个框架</div>
+<br/><hr/>
+<input type="button" value="showDemo" onclick="showDemo()">
+<input type="button" value="hideDemo" onclick="hideDemo()">
+<input type="button" value="toggleDemo" onclick="toggleDemo()">
+<input type="button" value="slideUpDemo" onclick="slideUpDemo()">
+<input type="button" value="slideDownDemo" onclick="slideDownDemo()">
+<input type="button" value="slideToggleDemo" onclick="slideToggleDemo()">
+<input type="button" value="fadeInDemo" onclick="fadeInDemo()">
+<input type="button" value="fadeToDemo" onclick="fadeToDemo()">
+<input type="button" value="fadeOutDemo" onclick="fadeOutDemo()">
+<button type="button" value="but1">变大</button>
+
+
+</body>
+</html>

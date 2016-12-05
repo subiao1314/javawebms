@@ -8,12 +8,12 @@ public class Theacher {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-    PrintStream out=System.out;
+/*    PrintStream out=System.out;
     File file = new File("F:"+File.separator+"Theacher"+File.separator+"theacher.txt"); 
  		file.mkdir();
- 		file.createNewFile();
+ 		file.createNewFile();*/
  		
- 		
+ 		System.currentTimeMillis();
  		
  		
  		

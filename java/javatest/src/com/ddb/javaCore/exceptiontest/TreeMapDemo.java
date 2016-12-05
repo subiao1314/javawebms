@@ -37,7 +37,8 @@ public class TreeMapDemo {
 		
 		out.println("hUTreeMapMap.comparator() : "+hUTreeMapMap.comparator());
 		 
-		
+		Long aLong=  System.currentTimeMillis();
+ 		System.out.println(aLong);
 		
 		
 		

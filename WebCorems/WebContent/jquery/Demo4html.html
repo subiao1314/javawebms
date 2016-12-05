@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>4.12345</title>
+<script type="text/javascript" src="JQuerymini.js"></script>
+</head>
+
+<script type="text/javascript">
+  $(function() {
+	$('#button2').bind('click',function(){
+		$(this).attr('disabled','true');
+	
+		});
+		$('#button3').bind('click',function(){
+			$('#span').append('I am coming!');
+			window.alert('调用了bind绑定事件的方法');
+	});
+
+	
+      $('#button6').click(function () {
+		$('#txt').focus();
+	});
+      $('#button4').bind('click',function(){
+    	  $('#txt').focus();
+      });
+      $('#button5').bind('click',function(){
+    	  $('#txt').blur();
+      });
+   /*    $('#button7').bind('click',function(){
+    	  $('#txt').hover(over,out);
+      });    */ //问！    
+		
+		
+		
+		
+		
+		
+})
+		
+		
+		
+		
+		
+
+</script>
+
+
+<body>
+<span>hello world</span>
+<p><input type="text" id="txt">
+<input type="button" id="button1" value="GO"></p>
+<input type="button" value="bind_disable" id="button2">
+<input type="button" value="bind" id="button3">
+<input type="button" value="bind_focus" id="button4">
+<input type="button" value="click_focus" id="button6">
+<input type="button" value="bind_blur" id="button5">
+<input type="button" value="bind_hover" id="button7">
+
+
+
+</body>
+</html>
