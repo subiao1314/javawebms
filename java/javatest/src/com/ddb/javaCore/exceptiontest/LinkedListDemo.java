@@ -11,7 +11,6 @@ public class LinkedListDemo {
 		PrintStream out=System.out;
 	LinkedList<Human>lLike=new LinkedList<Human>();
 		out.println("lLike.size() : "+lLike.size());
-		lLike.add(new())
 		
 		
 		
