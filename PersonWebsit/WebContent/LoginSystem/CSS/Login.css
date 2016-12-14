@@ -1,1 +1,22 @@
 @CHARSET "UTF-8";
+body {
+	background-image: url('images/demo1.jpg');
+    background-size: 100%;
+    background-repeat: repeat;
+   }
+table{
+    width: 240px;
+    height: 160px;
+    position:absolute;
+	top: 50%;
+	left: 50%;
+    
+}
+
+
+
+
+
+
+
+

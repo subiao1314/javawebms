@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery转到Dom对象的演示</title>
+<script type="text/javascript" src="JQuery.js"></script>
+
+
+</head>
+<body>
+
+<p id="sr">测试一</p>
+<p id="sr">测试二</p>
+<p id="sr">测试三</p>
+<input type="button" value="打印" onclick="name()"/>
+
+<script type="text/javascript">
+var $sr=$('#sr');
+var sr=$sr[0];
+
+function name() {
+	window.write(sr);
+}
+
+</script>
+
+
+</body>
+</html>

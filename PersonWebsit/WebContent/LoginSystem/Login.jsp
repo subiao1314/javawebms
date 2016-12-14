@@ -1,45 +1,13 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-
-
-<style type="text/css">
-<!--
-body {
-	background-image: url('images/demo1.jpg');
-    background-size: 100%;
-    background-repeat: repeat;
-   }
-table{
-    width: 240px;
-    height: 160px;
-    position:absolute;
-	top: 50%;
-	left: 50%;
-    
-}
--->
-</style>
-
-<style type="text/css">
-<!--
-   body {
-  
-	background-image: url(images/login.jpg);
-	
-   }
-   
-
--->
-</style>
-
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>欢迎来到登录界面</title>
 </head>
 <body>
-	<div class=div1>
-		<form name="form1" action=  method="post"
+	<form name="form1" action="<%=request.getContextPath()%>/LoginReceive"  method="post"
 			style="height: 437px;">
 			<table style="width: 326px; height: 204px; border: 1px solid;">
 				<tr>
@@ -57,7 +25,7 @@ table{
 				</tr>
 			</table>
 		</form>
-	</div>
-	<div></div>
+
+
 </body>
 </html>
