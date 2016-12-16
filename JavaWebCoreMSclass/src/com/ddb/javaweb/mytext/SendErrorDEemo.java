@@ -1,51 +1,26 @@
-package com.ddb.javaweb.servlet;
+package com.ddb.javaweb.mytext;
 
 import java.io.IOException;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.jsp.jstl.core.Config;
 
 /**
- * Servlet implementation class BB
+ * Servlet implementation class SendErrorDEemo
  */
-@WebServlet(
-		// loadOnStartup=2,
-		urlPatterns = { "/BB" }, 
-				initParams = { 
-						@WebInitParam(name = "BB", value = "安安")
-		})
-public class BB extends HttpServlet {
-	private static final long serialVersionUID = 2;
+@WebServlet("/SendErrorDEemo")
+public class SendErrorDEemo extends HttpServlet {
+	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BB() {
+    public SendErrorDEemo() {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
-	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-		System.out.println("BB:"+config.getInitParameter("BB"));
-		   System.out.println("此servlet的 loadOnStartup=2");
-		   
-	}
-
-	/**
-	 * @see Servlet#destroy()
-	 */
-	public void destroy() {
-		// TODO Auto-generated method stub
-	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -53,10 +28,12 @@ public class BB extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		System.out.println("servlet 服务中.....");
-		
+    //  response.sendError(HttpServletResponse.SC_ACCEPTED);	
+    //  response.setStatus(1, "http://www.baidu.com");
+	
+	
 	}
-          
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

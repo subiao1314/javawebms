@@ -9,36 +9,4 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>AA</servlet-name>
-    <servlet-class>com.ddb.javaweb.servlet.AA</servlet-class>
-    <init-param>
-      <param-name>address</param-name>
-      <param-value>安徽</param-value>
-    </init-param>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AA</servlet-name>
-    <url-pattern>/AA</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>InitParamter</servlet-name>
-    <servlet-class>com.ddb.javaweb.mytext.InitParamter</servlet-class>
-    <init-param>
-      <param-name>ins</param-name>
-      <param-value>职业培训学院</param-value>
-    </init-param>
-    <init-param>
-      <param-name>major</param-name>
-      <param-value>java技术</param-value>
-    </init-param>
-    <init-param>
-      <param-name>count</param-name>
-      <param-value>1000</param-value>
-    </init-param>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>InitParamter</servlet-name>
-    <url-pattern>/servlet/InitParamter</url-pattern>
-  </servlet-mapping>
 </web-app>

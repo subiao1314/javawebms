@@ -50,13 +50,13 @@ public class LoginReceive extends HttpServlet {
 	   if ("jiliu".equals(userName)&&"yongjin".equals(passWord)) {  //设置userName为“jiliu(激流)” 密码为“yongjin(勇进)”
 		    ServletContext context=getServletContext();
 		    RequestDispatcher rd=context.getRequestDispatcher("/LoginSystem/LoginSuccess.html");
-		    rd.forward(request, response);
+		    rd.include(request, response);
 		    //如果账号密码正确，跳转到登录页面
 		   
 	} else {
           ServletContext context =getServletContext();
           RequestDispatcher rd=context.getRequestDispatcher("/LoginSystem/LoginFalsed.html");
-          rd.forward(request, response);
+          rd.include(request, response);
           //否则跳转到登录失败页面
 	}
 	

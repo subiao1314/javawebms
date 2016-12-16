@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 		 System.out.println("这是servlet Login的 init() 初始化...");
-	        System.out.println("load-on-startup 为2");
+	     //   System.out.println("load-on-startup 为2");
 	}
 
 	/**
@@ -71,16 +71,15 @@ public class Login extends HttpServlet {
 	   PrintWriter out=response.getWriter();
 	   out.println("<html>");//输入相应的hyml源文件
 	   out.println("<head><title>用servlet测试get和post方法</title></head>");
-	   out.println("<h2>调用doGet()方法</h2>");
 	   out.println("<h2>用户输入信息如下：</h2>");
 	   String username=request.getParameter("userName");
-	    username=new String(username.getBytes("ISO8859-1"),"UTF-8");
+	 //   username=new String(username.getBytes("ISO8859-1"),"UTF-8");
 	   
 	   if (username==null||username=="") {
 		username="未输入";
 	}
 	   String password=request.getParameter("passWord");
-	   password=new String(password.getBytes("ISO8859-1"),"UTF-8");
+	//   password=new String(password.getBytes("ISO8859-1"),"UTF-8");
 	 //解决中文参数乱码方式一：new一个新的字符集
 	   if (password==null||password=="") {
 			password="未输入";
@@ -94,5 +93,9 @@ public class Login extends HttpServlet {
 	
 	}
     
-
+	public void destroy() {
+		// TODO Auto-generated method stub
+		 System.out.println("这是servlet Login的 destroy() 初始化...");
+	}
+    
 }

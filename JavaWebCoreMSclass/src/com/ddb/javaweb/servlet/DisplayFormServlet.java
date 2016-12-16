@@ -38,8 +38,8 @@ public class DisplayFormServlet extends HttpServlet {
 	     String str2=(String)session.getAttribute("fromSession");
 	     ServletContext context=getServletConfig().getServletContext();
 	     String str3=(String)context.getAttribute("fromContext");
-	     
-         response.setContentType("text/html;charset=UTF-8");
+         
+	     response.setContentType("text/html,charset=UTF-8");
          response.setCharacterEncoding("UTF-8");
          PrintWriter out=response.getWriter();
          out.println("<html>");
