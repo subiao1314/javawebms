@@ -42,7 +42,7 @@ public class LoginReceive extends HttpServlet {
 		// TODO Auto-generated method stub
         // doGet(request, response);
        response.setContentType("text/html,charset=UTF-8"); //设置字符编码方式
-        request.setCharacterEncoding("UTF-8");
+       // request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
        PrintWriter out=response.getWriter(); //设置输出流
 	  String userName=request.getParameter("username"); //获取实例化请求参数
@@ -50,13 +50,13 @@ public class LoginReceive extends HttpServlet {
 	   if ("jiliu".equals(userName)&&"yongjin".equals(passWord)) {  //设置userName为“jiliu(激流)” 密码为“yongjin(勇进)”
 		    ServletContext context=getServletContext();
 		    RequestDispatcher rd=context.getRequestDispatcher("/LoginSystem/LoginSuccess.html");
-		    rd.include(request, response);
+		    rd.forward(request, response);
 		    //如果账号密码正确，跳转到登录页面
 		   
 	} else {
           ServletContext context =getServletContext();
           RequestDispatcher rd=context.getRequestDispatcher("/LoginSystem/LoginFalsed.html");
-          rd.include(request, response);
+          rd.forward(request, response);
           //否则跳转到登录失败页面
 	}
 	
