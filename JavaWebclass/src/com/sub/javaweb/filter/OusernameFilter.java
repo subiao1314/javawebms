@@ -9,56 +9,52 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.annotation.WebInitParam;
+import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet Filter implementation class EncodingFilter
+ * Servlet Filter implementation class PasswoedFilter
  */
-/*@WebFilter(
+@WebFilter(
+		   filterName="f01",
 		dispatcherTypes = {
 				DispatcherType.REQUEST, 
 				DispatcherType.FORWARD, 
 				DispatcherType.INCLUDE, 
 				DispatcherType.ERROR
 		}
-					, 
-		urlPatterns = { "/LoginReceive" }, 
-		initParams = { 
-				@WebInitParam(name = "charset", value = "UTF-8")
-		})*/
-public class EncodingFilter implements Filter {
-          private String charset1;
+					, description = "拦截验证是否输入用户名", urlPatterns = { "/LoginReceive" })
+public class OusernameFilter implements Filter {
+
     /**
      * Default constructor. 
      */
-    public EncodingFilter() {
-        // TODO Auto-generated constructor stub
+    public OusernameFilter() {
     }
 
 	/**
 	 * @see Filter#destroy()
 	 */
 	public void destroy() {
-		System.out.println("EncodingFilter 销毁...");
 	}
 
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		System.out.println("EncodingFilter 运行中...");
-       request.setCharacterEncoding(charset1);
-		chain.doFilter(request, response);
-	//	System.out.println("EncodingFilter 执行结束中...");
+	    String username=request.getParameter("userName");
+	    if ("".equals(username)||null==username) {
+			HttpServletResponse response2=(HttpServletResponse)response;
+			response2.sendRedirect("/JavaWebclass/filter/NoUsername.jsp");
+      }else{
+			
+			chain.doFilter(request, response);
+			
+		}
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
+	
 	public void init(FilterConfig fConfig) throws ServletException {
-           System.out.println("EncodingFilter 初始化...");
-           charset1=fConfig.getInitParameter("charset");
-           System.out.println("EncodingFilter 初始化...初始化参数为-->"+charset1);
+
 	}
 
 }
