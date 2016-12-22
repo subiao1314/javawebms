@@ -9,7 +9,7 @@
 </head>
 <body>
 <%String now=new Date().toLocaleString(); %>
-<form action="<%request.getContextPath();%>../MemberLoginServlet" method="post">
+<form action="<%=request.getContextPath()%>/MemberLoginServlet" method="post">
 <h2>会员通道  <%=now%></h2>
 <h3>会员号:<input type="text" name="userName"/></h3>
 <h3>密&nbsp;码:<input type="password" name="passWord"/></h3>

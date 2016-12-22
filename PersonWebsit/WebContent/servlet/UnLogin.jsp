@@ -8,14 +8,14 @@
 </head>
 <body>
 <h4>Sorry,Your Userid no pass</h4>
-<h4>Will return to the login page in 4 seconds</h4>
+<%-- <h4>Will return to the login page in 4 seconds</h4>
 request.setHeader("refresh","1");
 <%  int i = 1; %>
 <h1>还有<%=i++%>秒跳转到会员登陆页面</h1>
  <%  if(i == 4) { %>
 <jsp:forward page="../servlet/MemberLogin.jsp"/>
 
-<% }%> 
+<% }%>  --%>
 
 </body>
 </html>

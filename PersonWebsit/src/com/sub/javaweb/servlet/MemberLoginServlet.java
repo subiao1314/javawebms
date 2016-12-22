@@ -30,14 +30,15 @@ public class MemberLoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     		response.getWriter().append("Served at: ").append(request.getContextPath());
+     		/*response.getWriter().append("Served at: ").append(request.getContextPath());*/
+		doPost(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+	//	doGet(request, response);
 		
 		response.setContentType("text/html,charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
@@ -58,9 +59,9 @@ public class MemberLoginServlet extends HttpServlet {
 		if (!"未输入".equals(username)&&!"未输入".equals(password)) {
 			HttpSession session=request.getSession();
 			session.setAttribute("userid", username);
+			response.sendRedirect("/PersonWebsit/servlet/MemberPage.jsp");
 		}else{
-			HttpSession session=request.getSession();
-			session.setAttribute("userid", "");
+			response.sendRedirect("/PersonWebsit/servlet/UnLogin.jsp");
 			
 		}
 		
